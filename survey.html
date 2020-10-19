@@ -1,6 +1,58 @@
 <!DOCTYPE html>
 <head>
 	<style type="text/css">
+		#submit-button{
+			background-color: #4CAF50
+		}
 		
 	</style>
 </head>
+<body>
+	<h1 id="title">Timmy's Survey Form</h1>
+	<p id="description">A simple survey form to practice</p>
+	<form id="survey-form">
+		<label for="name" id="name-label">Name:</label>
+		<input type="text" id="name" name="name" placeholder="Enter name here" required>
+
+		<label for="email" id="email-label">Email:</label>
+		<input type="email" id="email" name="email" placeholder="Enter email here" required>
+
+		<label for="number" id="number-label">Age:</label>
+		<input type="number" id="number" name="number" min="1" max="10" placeholder="Age">
+
+		<label for="dropdown" id="dropdown-label">Which role do you main?</label>
+		<select id="dropdown" name="dropdown">
+			<option value="mid">Mid</option>
+			<option value="adc">ADC</option>
+			<option value="support">Support</option>
+			<option value="jungle">Jungle</option>
+			<option value="top">Top</option>
+		</select>
+
+		<label id="subrole-label">Which sub-role do you prefer?</label>
+
+		<label for="subrole1"><input type="radio" name="sub" id="subrole1">Control Mage</label>
+		<label for="subrole2"><input type="radio" name="sub" id="subrole2">Tank</label>
+		<label for="subrole3"><input type="radio" name="sub" id="subrole3">Enchanter</label>
+		<label for="subrole4"><input type="radio" name="sub" id="subrole4">Assassin</label>
+
+
+		<label id="hate-label">Which of these do you hate? (Check all that apply)</label>
+
+		<label for="hate1"> <input type="checkbox" name="hate" id="hate1" value="fizz">Fizz </label>
+		<label for="hate2"><input type="checkbox" name="hate" id="hate2"  value="zed">Zed</label>
+		<label for="hate3"><input type="checkbox" name="hate" id="hate3" value="zoe">Zoe</label>
+		<label for="hate4"><input type="checkbox" name="hate" id="hate4" value="kled">Kled</label>
+		<label for="hate5"><input type="checkbox" name="hate" id="hate5" value="sona">Sona</label>
+		<label for="hate6"><input type="checkbox" name="hate" id="hate6" value="karma">Karma</label>
+		<label for="hate7"><input type="checkbox" name="hate" id="hate7" value="nasus">Nasus</label>
+		<label for="hate8"><input type="checkbox" name="hate" id="hate8" value="lucian">Lucian</label>
+		<label for="hate9"><input type="checkbox" name="hate" id="hate9" value="senna">Senna</label>
+
+		<label for="comments">Any comments or thoughts?</label>
+		<textarea id="comments" name="comments" rows="5" cols="40" placeholder="Enter comments here..."></textarea>
+
+		<input type="submit" id="submit-button">
+
+	</form>
+</body>
