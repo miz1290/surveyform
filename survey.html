@@ -1,10 +1,55 @@
 <!DOCTYPE html>
 <head>
 	<style type="text/css">
-		#submit-button{
-			background-color: #4CAF50
+
+		#survey-form{
+			display: flex;
+			flex-flow: column;
+			align-content: center;
+			justify-content: center;
+			margin-left: 25%;
+			margin-right: 25%;
+
 		}
-		
+
+		*{
+			box-sizing: border-box;
+		}
+
+		#title{
+			text-align: center;
+		}
+
+		#description{
+			text-align: center;
+		}
+		label{
+			display: flex;
+			align-items: center;
+			font-size: 1.123rem;
+			margin-bottom: 0.5rem;
+			margin-top: 0.5rem;
+		}
+
+		body{
+			background-image: url("https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/other/cat_relaxing_on_patio_other/1800x1200_cat_relaxing_on_patio_other.jpg");
+			color: white;
+			font-family: Arial, sans-serif;
+		}
+
+		#submit{
+			background-color: #4CAF50;
+			margin: 5px 2px;
+			border: none;
+			cursor: pointer;
+		}
+
+		form {
+			background: rgba(10,0,255,0.4);
+			padding: 2.5rem 0.625rem;
+			border-radius: 0.25rem;
+
+		}	
 	</style>
 </head>
 <body>
@@ -13,12 +58,13 @@
 	<form id="survey-form">
 		<label for="name" id="name-label">Name:</label>
 		<input type="text" id="name" name="name" placeholder="Enter name here" required>
+		
 
 		<label for="email" id="email-label">Email:</label>
 		<input type="email" id="email" name="email" placeholder="Enter email here" required>
 
 		<label for="number" id="number-label">Age:</label>
-		<input type="number" id="number" name="number" min="1" max="10" placeholder="Age">
+		<input type="number" id="number" name="number" min="1" max="100" placeholder="Age">
 
 		<label for="dropdown" id="dropdown-label">Which role do you main?</label>
 		<select id="dropdown" name="dropdown">
@@ -29,15 +75,15 @@
 			<option value="top">Top</option>
 		</select>
 
-		<label id="subrole-label">Which sub-role do you prefer?</label>
+		<p>Which sub-role do you prefer?</p>
 
-		<label for="subrole1"><input type="radio" name="sub" id="subrole1">Control Mage</label>
-		<label for="subrole2"><input type="radio" name="sub" id="subrole2">Tank</label>
-		<label for="subrole3"><input type="radio" name="sub" id="subrole3">Enchanter</label>
-		<label for="subrole4"><input type="radio" name="sub" id="subrole4">Assassin</label>
+		<label for="subrole1"><input type="radio" value="control-mage" name="sub" id="subrole1">Control Mage</label>
+		<label for="subrole2"><input type="radio" value="tank" name="sub" id="subrole2">Tank</label>
+		<label for="subrole3"><input type="radio" value="enchanter" name="sub" id="subrole3">Enchanter</label>
+		<label for="subrole4"><input type="radio" value="assassin" name="sub" id="subrole4">Assassin</label>
 
 
-		<label id="hate-label">Which of these do you hate? (Check all that apply)</label>
+		<p>Which of these do you hate? (Check all that apply)</p>
 
 		<label for="hate1"> <input type="checkbox" name="hate" id="hate1" value="fizz">Fizz </label>
 		<label for="hate2"><input type="checkbox" name="hate" id="hate2"  value="zed">Zed</label>
@@ -49,10 +95,10 @@
 		<label for="hate8"><input type="checkbox" name="hate" id="hate8" value="lucian">Lucian</label>
 		<label for="hate9"><input type="checkbox" name="hate" id="hate9" value="senna">Senna</label>
 
-		<label for="comments">Any comments or thoughts?</label>
+		<p>Any comments or thoughts?</p>
 		<textarea id="comments" name="comments" rows="5" cols="40" placeholder="Enter comments here..."></textarea>
 
-		<input type="submit" id="submit-button">
+		<input type="submit" id="submit">
 
 	</form>
 </body>
